@@ -3,129 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Glance: Spend Awareness</title>
-
-<style>
+    <title>Privacy Policy - ChromaBounce</title>
+    <style>
         :root {
-            --primary: #2563eb;
-            --text: #1f2937;
-            --muted: #6b7280;
-            --bg: #f9fafb;
-            --card: #ffffff;
+            --bg-color: #05060f;
+            --panel-bg: rgba(255, 255, 255, 0.03);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --text-main: #ffffff;
+            --text-muted: #8e92a8;
+            --accent-cyan: #00f0ff;
+            --accent-pink: #ff007f;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
             margin: 0;
             padding: 40px 20px;
         }
 
         .container {
-            max-width: 720px;
-            margin: auto;
-            background: var(--card);
-            padding: 40px;
-            border-radius: 14px;
-            border: 1px solid #eee;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
         }
 
         h1 {
-            margin-top: 0;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin: 0 0 10px 0;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.03em;
+        }
+
+        .last-updated {
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            color: var(--accent-pink);
+            font-size: 0.85rem;
+            font-weight: bold;
+            letter-spacing: 0.05em;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
         }
 
         h2 {
-            margin-top: 2rem;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: var(--accent-cyan);
+            border-bottom: 1px solid rgba(0, 240, 255, 0.15);
+            padding-bottom: 8px;
         }
 
-        p, li {
-            color: #444;
-            line-height: 1.6;
-        }
-
-        .updated {
-            color: var(--muted);
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
+        .panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
         }
 
         ul {
-            padding-left: 18px;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 12px;
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        li::before {
+            content: "▪";
+            position: absolute;
+            left: 0;
+            color: var(--accent-pink);
+            font-size: 1rem;
+        }
+
+        li strong {
+            color: var(--text-main);
         }
 
         a {
-            color: var(--primary);
+            color: var(--accent-cyan);
             text-decoration: none;
+            transition: color 0.2s ease;
         }
 
         a:hover {
+            color: var(--accent-pink);
             text-decoration: underline;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 24px;
-            }
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, var(--panel-border), transparent);
+            margin: 40px 0;
         }
     </style>
 </head>
-
 <body>
+
     <div class="container">
-        <h1>Privacy Policy for Glance: Spend Awareness</h1>
-        <div class="updated">Last updated: April 5, 2026</div>
+        <header>
+            <h1>Privacy Policy for ChromaBounce</h1>
+            <div class="last-updated">LAST UPDATED: MAY 27, 2026</div>
+        </header>
 
-        <p>
-            This Privacy Policy explains how Glance: Spend Awareness ("the App") handles information.
-        </p>
+        <p>This Privacy Policy explains how <strong>ChromaBounce</strong> ("the App") handles information. This document serves as a clear statement of data practices, engineered to protect both the user and the integrity of the application platform.</p>
 
-        <h2>No Data Collection</h2>
-        <p>
-            The App does not collect, store, transmit, or process any personal information, usage data,
-            or device data. All functionality operates entirely on your device.
-        </p>
+        <hr>
 
-        <h2>App Store Privacy Labels</h2>
-        <ul>
-            <li><strong>Data Not Collected</strong></li>
-            <li>No tracking</li>
-            <li>No data linked to you</li>
-            <li>No data collected at all</li>
-        </ul>
+        <h2>1. Absolute Zero-Data Architecture</h2>
+        <div class="panel">
+            <ul>
+                <li><strong>No Collection:</strong> The App does not collect, harvest, aggregate, or intercept any personal information, usage metrics, diagnostic logs, or device-specific identifiers.</li>
+                <li><strong>Local Processing:</strong> All gameplay data, high scores, sector progression matrices, and user configurations are stored natively on your local device's secure storage and within an isolated, localized database queue[cite: 3, 4].</li>
+                <li><strong>Zero Transmission:</strong> No data is ever transmitted, leaked, or synced to external servers or remote infrastructures.</li>
+            </ul>
+        </div>
 
-        <h2>Tracking</h2>
-        <p>
-            The App does not track users across apps or websites.
-        </p>
+        <h2>2. App Store Privacy Label Compliance</h2>
+        <p>In strict accordance with global app marketplace transparency mandates, the official data disclosure labels for the App are defined as follows:</p>
+        <div class="panel">
+            <ul>
+                <li><strong>Data Not Collected:</strong> The App does not collect any data.</li>
+                <li><strong>No Tracking:</strong> The App does not track you across apps or websites owned by other companies.</li>
+                <li><strong>No Data Linked to You:</strong> No data is compiled or associated with your identity.</li>
+            </ul>
+        </div>
 
-        <h2>CCPA / U.S. Privacy</h2>
-        <p>
-            Because no personal information is collected, there is nothing to access, delete, or opt out of.
-        </p>
+        <h2>3. Global Regulatory Alignments</h2>
+        <p>Because the App operates with an absolute zero-data collection footprint, it automatically complies with major international privacy frameworks by eliminating the risk of data exposure:</p>
+        <div class="panel">
+            <ul>
+                <li><strong>Children’s Online Privacy Protection Act (COPPA) & GDPR-K:</strong> The App does not collect, request, or process any information from anyone, including children under the age of 13 (or applicable jurisdictional age limits). It is entirely safe for all audiences.</li>
+                <li><strong>California Consumer Privacy Act (CCPA) & U.S. State Privacy Laws:</strong> Because zero personal data is collected or maintained, there is no data payload to access, review, port, delete, or opt out of.</li>
+                <li><strong>General Data Protection Regulation (GDPR):</strong> The App establishes zero data processing pipelines, meaning no personal data processing, tracking, or profiling takes place.</li>
+            </ul>
+        </div>
 
-        <h2>Data Retention</h2>
-        <p>No data is retained.</p>
+        <h2>4. Third-Party Services & Boundaries</h2>
+        <p>The App is built using Apple's native iOS framework architectures. While the App itself contains zero data tracking, players may optionally interact with native system-level features provided by Apple Inc. (such as Game Center cloud save authentication or iCloud backup services).</p>
+        <p>Any such interactions are governed exclusively by your device-level system settings and <strong>Apple’s standard Privacy Policy</strong>. The App does not have access to individual platform credentials or account tokens generated by these system services.</p>
 
-        <h2>Data Sharing</h2>
-        <p>No data is shared with third parties.</p>
+        <h2>5. Indemnification & Limitation of Liability</h2>
+        <div class="panel">
+            <ul>
+                <li><strong>As-Is Provision:</strong> The App is distributed as-is, with no implied warranties regarding uninterrupted or error-free execution.</li>
+                <li><strong>Mutual Protection:</strong> Because no data is collected, stored, or managed on external infrastructure by the App, there is no liability for local hardware failures, unauthorized physical device access, or data corruption occurring on the user's personal hardware.</li>
+            </ul>
+        </div>
 
-        <h2>Children’s Privacy</h2>
-        <p>No information is collected from anyone, including children under 13.</p>
+        <h2>6. Policy Amendments</h2>
+        <p>This Privacy Policy may be modified periodically to adapt to changing regulatory demands or app marketplace guidelines. Any structural changes will be reflected immediately on this page by updating the "Last Updated" date at the top of the document. Continued use of the App following an update constitutes an acceptance of the revised terms.</p>
 
-        <h2>Security</h2>
-        <p>No personal data is stored or transmitted.</p>
-
-        <h2>Changes</h2>
-        <p>This policy may be updated. Changes will be posted on this page.</p>
-
-        <h2>Contact</h2>
-        <p>
-            <a href="mailto:sprudent3@gmail.com">sprudent3@gmail.com</a>
-        </p>
+        <h2>7. Contact Terminal</h2>
+        <p>For technical questions regarding this data architecture policy, contact the system administration email directly:</p>
+        <div class="panel" style="font-family: SFMono-Regular, Consolas, monospace;">
+            <strong>Support Terminal:</strong> <a href="mailto:sprudent3@gmail.com">sprudent3@gmail.com</a>
+        </div>
     </div>
+
 </body>
 </html>
-
